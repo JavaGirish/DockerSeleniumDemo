@@ -22,6 +22,12 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+
+    - name: Start Selenium Grid
+      run: docker-compose up -d
         
     - name: Build with Maven
       run: mvn clean test
+
+    - name: Stop Selenium Grid
+      run: docker-compose down

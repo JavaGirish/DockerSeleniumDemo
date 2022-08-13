@@ -35,7 +35,7 @@ public class BaseTest {
                 break;
         }
 
-        driver = new RemoteWebDriver(new URL("http://34.93.248.5:4444"), capabilities);
+        driver = new RemoteWebDriver(new URL("http://localhost:4444"), capabilities);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofMinutes(1));
         driver.get("https://www.amazon.in/");

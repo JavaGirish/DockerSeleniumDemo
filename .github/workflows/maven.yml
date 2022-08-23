@@ -51,5 +51,6 @@ jobs:
       uses: docker/build-push-action@v3
       with:
           context: .
+          file: ./Dockerfile
           push: true
-          tags: user/app:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/sampleImage:latest
